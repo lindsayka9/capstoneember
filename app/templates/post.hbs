@@ -1,5 +1,15 @@
-<br>
+<div>
 
-{{blog-post post=model}}
+  <h3>{{model.title}}</h3>
 
-{{!-- {{outlet}} --}}
+  <p>
+    {{model.content}}
+  </p>
+
+
+  {{!-- {{blog-post/edit post=post updatePost='updatePost'}} --}}
+  {{!-- <button {{action 'deletePost'}}>Delete Post</button>
+  <button {{action 'edit'}}>Edit Post</button> --}}
+
+
+</div>

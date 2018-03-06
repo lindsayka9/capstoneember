@@ -1,14 +1,17 @@
-<div>
-  {{#each model as |post|}}
-    <h3>
-      {{#link-to 'post' post}}
-        {{post.title}}
-      {{/link-to}}
-    </h3>
-  {{/each}}
-</div>
-{{#link-to 'posts.new'}}<button >Create a new post</button>{{/link-to}}
+{{#each model as |post|}}
+  <h4>
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
 
-<div class="col-md-8 col-md-offset-2">
-  {{outlet}}
-</div>
+    <button {{action 'delete' post}}>Delete</button>
+
+    {{input value=post.title}}
+    {{!-- {{input value=post.content}} --}}
+    <button {{action 'edit' post}}>EDIT</button>
+    {{!-- {{log 'this is model' model}} --}}
+  </h4>
+{{/each}}
+
+{{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
+{{outlet}}
