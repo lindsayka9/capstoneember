@@ -1,0 +1,18 @@
+<div>
+
+  <h3 {{action 'toggleDetail'}}>{{post.title}}</h3>
+  {{blog-post/edit list=list
+                    save='edit'}}
+  <button {{action 'deleteList'}}>Delete Post</button>
+  <button {{action 'edit'}}>Edit Post</button>
+
+  <p>
+    {{#each post.items as |item|}}
+      {{shopping-list/item item=item
+                            toggleDone='toggleItemDone'
+                            deleteItem='deleteItem'}}
+    {{/each}}
+    <li>{{input value=newItem.content placeholder='New Item' enter='save'}}</li>
+  </p>
+
+</div>
