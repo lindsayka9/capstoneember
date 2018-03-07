@@ -4,14 +4,14 @@
       {{post.title}}
     {{/link-to}}
 
-  {{#if post.editable}}
+  {{!-- {{#if post.editable}}
     <button {{action 'delete' post}}>Delete</button>
 
     {{input value=post.title}}
     {{!-- {{input value=post.content}} --}}
-    <button {{action 'edit' post}}>EDIT</button>
+    {{!-- <button {{action 'edit' post}}>EDIT</button>
     {{!-- {{log 'this is model' model}} --}}
-  {{/if}}
+  {{!-- {{/if}} --}}
   </h4>
 {{/each}}
 

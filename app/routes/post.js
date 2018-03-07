@@ -10,6 +10,17 @@ export default Route.extend({
     return this.get('store').findRecord('post', id)
   },
   actions: {
+    delete(post){
+      console.log('maybe')
+      console.log('post is', post)
+      return post.destroyRecord()
+      .then(() => this.transitionTo('posts'))
+    },
+    edit (post) {
+      console.log('in edit')
+      console.log(post)
+      return post.save()
+    }
    //  toggleHide (post) {
    //    console.log(post)
    //    console.log('trying to togglehide a post')

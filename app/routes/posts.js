@@ -6,15 +6,15 @@ export default Route.extend({
     console.log(this.get('store').findAll('post'))
    },
    actions: {
-    delete(post){
-      console.log('maybe')
-      console.log('post is', post)
-      return post.destroyRecord()
-    },
-    edit (post) {
-      console.log('in edit')
-      console.log(post)
-      return post.save()
-    }
+    // delete(post){
+    //   console.log('maybe')
+    //   console.log('post is', post)
+    //   return post.destroyRecord()
+    // },
+    // edit (post) {
+    //   console.log('in edit')
+    //   console.log(post)
+    //   return post.save()
+    // }
   }
 });

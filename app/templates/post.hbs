@@ -5,8 +5,15 @@
   <p>
     {{model.content}}
   </p>
-{{log model}}
-  <p>{{model.user}}</p>
+  {{#if model.editable}}
+    <button {{action 'delete' model}}>Delete</button>
+
+    {{input value=model.title}}
+    {{input value=model.content}}
+    <button {{action 'edit' model}}>EDIT</button>
+    {{log 'this is model' model}}
+  {{/if}}
+
   {{!-- {{blog-post/edit post=post updatePost='updatePost'}} --}}
   {{!-- <button {{action 'deletePost'}}>Delete Post</button>
   <button {{action 'edit'}}>Edit Post</button> --}}
