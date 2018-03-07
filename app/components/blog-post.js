@@ -1,23 +1,22 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['postr'],
-  classNameBindings: ['postDetailHidden'],
-  postDetailHidden: Ember.computed.alias('post.hidden'),
-  // newContent: {
-  //   // content: 'whatever I want to write in'
-  // },
+  // classNames: ['postr'],
+  // classNameBindings: ['postDetailHidden'],
+  // postDetailHidden: Ember.computed.alias('post.hidden'),
+  // // newContent: {
+  // //   // content: 'whatever I want to write in'
+  // // },
   actions: {
     toggleDetail () {
       // this.toggleProperty('postDetailHidden');
-      this.sendAction('toggleHide', this.get('post'))
+      this.sendAction('toggleHide', this.get('post'));
     },
     delete (post) {
-      this.sendAction('delete', this.get('post'))
+      this.sendAction('delete', post);
     },
     edit (post) {
-      this.sendAction('edit', post)
+      this.sendAction('edit', post);
     },
-
   },
 });

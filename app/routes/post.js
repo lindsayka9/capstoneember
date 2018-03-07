@@ -12,6 +12,7 @@ export default Route.extend({
     },
     edit (post) {
       return post.save()
+      .then(() => this.transitionTo('posts'))
     },
     toggleEdit () {
 

@@ -1,1 +1,5 @@
 @import "ember-bootstrap/bootstrap";
+
+.edit-hidden form {
+  display: none;
+}
