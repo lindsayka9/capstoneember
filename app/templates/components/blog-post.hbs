@@ -1,15 +1,11 @@
-{{!-- <div>
+  <br>
+    <h3>{{post.title}}</h3>
+  <br>
+    <p>{{post.content}}</p>
+  <br>
+{{#if post.editable}}
+  <button {{action 'delete' post}}>Delete</button>
+  {{!-- <button>Edit Post</button> --}}
+  {{blog-post/edit post=post edit='edit'}}
 
-  <h3 {{action 'toggleDetail'}}>{{post.title}}</h3>
-
-  <p>
-    {{post.content}}
-  </p>
-
-
-  {{blog-post/edit post=post updatePost='updatePost'}}
-  {{!-- <button {{action 'deletePost'}}>Delete Post</button>
-  <button {{action 'edit'}}>Edit Post</button> --}}
-
-
-{{!-- </div> --}}
+{{/if}}

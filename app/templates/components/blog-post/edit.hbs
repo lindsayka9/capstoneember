@@ -1,5 +1,9 @@
-{{!-- <form {{action 'updatePost' on='submit' }}>
+<br><br>
+<form class="edit-form">
+  <h6>Title:</h6>
   {{input value=post.title}}
+  <h6>Post Content:</h6>
   {{input value=post.content}}
-  <button type="submit">Save</button>
-</form> --}}
+  <br>
+  <button {{action 'edit' post}}>EDIT</button>
+</form>

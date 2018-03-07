@@ -1,18 +1,11 @@
+<br><br>
 {{#each model as |post|}}
   <h4>
     {{#link-to 'post' post}}
       {{post.title}}
     {{/link-to}}
-
-  {{!-- {{#if post.editable}}
-    <button {{action 'delete' post}}>Delete</button>
-
-    {{input value=post.title}}
-    {{!-- {{input value=post.content}} --}}
-    {{!-- <button {{action 'edit' post}}>EDIT</button>
-    {{!-- {{log 'this is model' model}} --}}
-  {{!-- {{/if}} --}}
   </h4>
+  <br>
 {{/each}}
 
 {{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}

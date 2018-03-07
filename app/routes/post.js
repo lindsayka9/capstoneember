@@ -20,19 +20,9 @@ export default Route.extend({
       console.log('in edit')
       console.log(post)
       return post.save()
+    },
+    toggleEdit () {
+
     }
-   //  toggleHide (post) {
-   //    console.log(post)
-   //    console.log('trying to togglehide a post')
-   //    post.toggleProperty('hidden')
-   //    return post.save()
-   //  },
-   //  deletePost (post) {
-   //    console.log(post)
-   //   return post.destroyRecord()
-   // },
-   // updatePost (post) {
-   //    post.save();
-   //  }
   }
 });
