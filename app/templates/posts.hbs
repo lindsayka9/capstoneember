@@ -1,4 +1,4 @@
-<br><br>
+{{!-- <br><br>
 {{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
 {{outlet}}
 
@@ -10,7 +10,26 @@
     {{/link-to}}
   </h4>
   <br>
-{{/each}}
+{{/each}} --}}
 
-{{!-- {{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
-{{outlet}} --}}
+<h1>What's on Your Mind?</h1>
+<br>
+{{new-post createPost='createPost'}}
+<br><br>
+
+<h3>Recent Posts</h3>
+{{#each model as |post|}}
+<div>
+  <h4>
+    {{#link-to 'post' post}}
+      {{post.title}}
+    {{/link-to}}
+    {{show-user user=post.user}}
+  </h4>
+  <br>
+  {{!-- <h5>{{post.content}}</h5> --}}
+</div>
+{{!-- <span>{{a-post post=post}}</span> --}}
+
+{{/each}}
+{{outlet}}

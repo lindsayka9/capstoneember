@@ -1,5 +1,7 @@
-<div>
-  {{blog-post post=model
-              edit='edit'
-              delete='delete'}}
-</div>
+{{message}}
+{{blog-post post=model
+              updatePost='updatePost'
+              createComment='createComment'
+              deletePost='deletePost'
+              toggleHidden='toggleHidden'}}
+{{outlet}}

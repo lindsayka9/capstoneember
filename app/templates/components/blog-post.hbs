@@ -1,4 +1,4 @@
-  <br>
+  {{!-- <br>
     <h3>{{post.title}}</h3>
   <br>
     <p>{{post.content}}</p>
@@ -7,4 +7,51 @@
   <button {{action 'delete' post}}>Delete</button>
   {{blog-post/edit post=post edit='edit'}}
 
+{{/if}} --}}
+<div class='blogpost'>
+  <h2 class='blog-post-title'>
+    {{post.title}}
+  </h2>
+    {{show-user user=post.user}}
+    <br><br>
+  <p class='blog-post-content'>
+    {{post.content}}
+  </p>
+</div>
+<br><br>
+<hr>
+{{!-- <span>{{a-post post=post deletePost='deletePost'}}</span> --}}
+{{#if post.editable}}
+  {{!-- <input {{action 'toggleHidden'}} type="button" id="edit-toggle-button" value="Edit Post"> --}}
+
+
+  <br>
+  <br>
+  <div class="edit-form">
+    <h4 style="text-decoration:underline" class="edit-post">Edit Post</h4>
+    <form {{action 'updatePost' on='submit'}}>
+      <h5>Title:</h5>
+      {{input value=post.title placeholder='Title'}}
+      <br>
+      <h5>Content:</h5>
+      {{input value=post.content placeholder='Content'}}
+      <br>
+      <span>{{a-post post=post deletePost='deletePost'}}</span>
+
+      <button class="submit" type="submit">Save</button>
+      {{message}}
+    </form>
+  </div>
 {{/if}}
+
+{{!-- <div class="dont-hide">
+
+{{new-comment-form post=post createComment='createComment'}}
+
+<h4 class="comment-count">{{post.comments.length}}<span> comments</span></h4>
+<br><br>
+{{#each post.comments as |comment|}}
+  {{blog-post/comment post=post comment=comment createComment='createComment'}}
+{{/each}}
+
+</div> --}}
