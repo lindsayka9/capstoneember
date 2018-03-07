@@ -1,4 +1,8 @@
 <br><br>
+{{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
+{{outlet}}
+
+<br><br>
 {{#each model as |post|}}
   <h4>
     {{#link-to 'post' post}}
@@ -8,5 +12,5 @@
   <br>
 {{/each}}
 
-{{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
-{{outlet}}
+{{!-- {{#link-to 'posts.new'}}<button>Add New Post</button>{{/link-to}}
+{{outlet}} --}}

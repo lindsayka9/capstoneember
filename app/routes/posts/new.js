@@ -7,7 +7,6 @@ export default Route.extend({
   },
   actions: {
     save(newPost) {
-      console.log('god work please')
       return newPost.save()
         .then(() => this.transitionTo('posts'))
     }

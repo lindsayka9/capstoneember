@@ -13,12 +13,9 @@ export default Component.extend({
       this.sendAction('toggleHide', this.get('post'))
     },
     delete (post) {
-      console.log(post)
       this.sendAction('delete', this.get('post'))
     },
     edit (post) {
-      console.log('inside blog-post edit')
-      console.log(post)
       this.sendAction('edit', post)
     },
 
