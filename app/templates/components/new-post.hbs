@@ -1,5 +1,7 @@
 {{#if auth.isAuthenticated}}
+<div class="create-button">
   <button class="create-post" {{action 'togglePostFormHide'}}>Add New Post</button>
+</div>
   <form {{action 'createPost' on='submit'}}>
     <h4>New Post</h4>
     {{input value=newPost.title placeholder='Title'}}

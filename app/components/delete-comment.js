@@ -6,7 +6,8 @@ export default Component.extend({
   actions: {
       deleteComment (comment) {
         comment.deleteRecord();
-        comment.save();
+        comment.save()
+        .then(() => this.get('flashMessages').success('Comment Deleted'));
       }
     }
 });

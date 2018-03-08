@@ -1,16 +1,76 @@
 @import "ember-bootstrap/bootstrap";
 
+
 .edit-hidden .edit-form{
   display: none;
 }
 
-.new-hidden form{
+.new-hidden form {
   display: none;
 }
 
-body {
-  width: 90%;
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+}
 
+.recent {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.post-title {
+  color: rgba(#10241D, .9);
+  font-weight: 600;
+}
+
+.posts-div {
+  width: 65%;
+  margin: auto;
+}
+
+.index-page {
+  text-align: center;
+  color: #10241D;
+  font-weight: 600;
+  margin-top: 50px;
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .link-to-posts {
+    color: rgba(#10241D, 0.8);
+    background-color: rgba(#67CEA7, 0.25);
+    border: 1px solid rgba(#10241D, 0.25);
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+
+.subheading-front {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 50px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.navbar-default {
+  background: rgba(#67CEA7, 0.25);
+  border: 1px solid rgba(#10241D, 0.25);
+  color: black;
+}
+
+body {
+  color: #10241D;
+  font-family: 'Open Sans', sans-serif;
+  width: 90%;
 }
 
 .sign-in-post {
@@ -29,12 +89,32 @@ hr {
 }
 
 .new-post-content {
-  // padding: 10px;
   height: 100px;
-  // margin: 10px 0;
 }
 
 .updateformhidden :not(:first-child) {
+  display: none;
+}
+
+.post-edit-buttons {
+  display: inline-flex;
+  margin: 20px;
+
+  button {
+    margin-left: 30px;
+    background-color: rgba(#67CEA7, 0.25);
+    border: 1px solid rgba(#10241D, 0.25);
+    border-radius: 5px;
+  }
+
+  input {
+    background-color: rgba(#67CEA7, 0.25);
+    border: 1px solid rgba(#10241D, 0.25);
+    border-radius: 5px;
+  }
+}
+
+.editformhidden .edit-form{
   display: none;
 }
 
@@ -47,25 +127,34 @@ hr {
 }
 
 .edit-comment {
-  // text-decoration: none;
+  background-color: rgba(#67CEA7, 0.25);
+  border: 1px solid rgba(#10241D, 0.25);
+  border-radius: 5px;
   margin: 3px;
+  margin-top: 15px;
 }
+
 .comment-buttons {
-  margin: 5px;
   display: inline-flex;
   flex-direction: row;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.comment {
+.each-comment {
+  background: rgba(#DAFCEF, 0.25);
+  border: 1px solid rgba(#10241D, 0.25);
+  border-radius: 5px;
+  color: #10241D;
   font-size: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 10px;
 }
 
 .comment-count {
   font-size: 20px;
+  margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-style: oblique;
@@ -85,6 +174,23 @@ hr {
   clear: both;
 }
 
+.create-post {
+  background-color: rgba(#67CEA7, 0.25);
+  border: 1px solid rgba(#10241D, 0.25);
+  border-radius: 5px;
+}
+
+.create-button {
+  text-align: center;
+}
+
 .user {
-  font-size: 20px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.submit {
+  background-color: rgba(#67CEA7, 0.25);
+  border: 1px solid rgba(#10241D, 0.25);
+  border-radius: 5px;
 }

@@ -3,6 +3,7 @@
   {{!-- {{log post.id}} --}}
   <form {{ action 'createComment' on='submit' post=post }}>
     {{input value=newComment.text placeholder='New Comment'}}
+    <br>
     <button class="submit" type="submit">Post Comment</button>
     {{message}}
   </form>

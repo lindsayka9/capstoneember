@@ -6,6 +6,7 @@ export default Route.extend({
   flashMessages: service(),
   model () {
     return this.get('store').findAll('post');
+    return this.get('store').findRecord('post', params.post_id, {include: 'comments'});
   },
   auth: service(),
   actions: {

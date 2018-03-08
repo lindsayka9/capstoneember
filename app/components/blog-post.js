@@ -2,6 +2,8 @@ import Component from '@ember/component';
 
 export default Component.extend({
   classNames: ['newPost'],
+  classNameBindings: ['editformhidden'],
+  editformhidden: true,
   message: null,
   actions: {
     updateComment() {
@@ -19,6 +21,9 @@ export default Component.extend({
     },
     createComment(comment, post) {
       this.sendAction('createComment', comment, post);
+    },
+    toggleEditFormHide () {
+      return this.toggleProperty('editformhidden');
     }
   }
 });

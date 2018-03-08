@@ -13,13 +13,14 @@
 <hr>
 {{!-- <span>{{a-post post=post deletePost='deletePost'}}</span> --}}
 {{#if post.editable}}
-  {{!-- <input {{action 'toggleHidden'}} type="button" id="edit-toggle-button" value="Edit Post"> --}}
-
-
+  <div class="post-edit-buttons">
+    <input {{action 'toggleEditFormHide'}} type="button" id="edit-toggle-button" value="Edit Post">
+    <span>{{a-post post=post deletePost='deletePost'}}</span>
+  </div>
   <br>
   <br>
   <div class="edit-form">
-    <h4 style="text-decoration:underline" class="edit-post">Edit Post</h4>
+    <h3 style="text-decoration:underline" class="edit-post">Edit Post</h3>
     <form {{action 'updatePost' on='submit'}}>
       <h5>Title:</h5>
       {{input value=post.title placeholder='Title'}}
@@ -27,7 +28,7 @@
       <h5>Content:</h5>
       {{input value=post.content placeholder='Content'}}
       <br>
-      <span>{{a-post post=post deletePost='deletePost'}}</span>
+      {{!-- <span>{{a-post post=post deletePost='deletePost'}}</span> --}}
 
       <button class="submit" type="submit">Save</button>
       {{message}}

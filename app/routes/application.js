@@ -4,14 +4,14 @@ import { inject as service } from '@ember/service';
 export default Route.extend({
   auth: service(),
   flashMessages: service(),
-  beforeModel() {
-    this.transitionTo('posts');
-  },
+  // beforeModel() {
+  //   this.transitionTo('posts');
+  // },
   actions: {
     signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
-        .then(() => this.transitionTo('sign-in'))
+        .then(() => this.transitionTo('posts'))
         .then(() => {
           this.get('flashMessages').warning('You have been signed out.');
         })

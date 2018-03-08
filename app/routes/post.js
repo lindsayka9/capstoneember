@@ -10,7 +10,7 @@ export default Route.extend({
   actions: {
     updatePost(post) {
       return post.save()
-      // .then(() => document.getElementById('edit-form'))
+      return this.toggleProperty('editformhidden')
       .then(() => this.get('flashMessages').success('Post Updated'));
     },
     deletePost (post) {
@@ -21,8 +21,8 @@ export default Route.extend({
     createComment(comment, post) {
       let newComment = this.get('store').createRecord('comment', comment);
       post.get('comments').pushObject(newComment);
-      newComment.save();
-      this.get('flashMessages').success('Comment posted');
+      newComment.save()
+      .then(() => this.get('flashMessages').success('Comment posted'));
     }
   }
 });
