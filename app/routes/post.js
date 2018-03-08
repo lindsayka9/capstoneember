@@ -10,8 +10,8 @@ export default Route.extend({
   actions: {
     updatePost(post) {
       return post.save()
-      return this.toggleProperty('editformhidden')
-      .then(() => this.get('flashMessages').success('Post Updated'));
+      .then(() => this.get('flashMessages').success('Post Updated'))
+      this.toggleProperty('editformhidden')
     },
     deletePost (post) {
       return post.destroyRecord()
