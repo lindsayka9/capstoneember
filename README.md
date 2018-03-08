@@ -9,7 +9,9 @@
 **Wireframes:** https://i.imgur.com/UG0rhVg.jpg, https://i.imgur.com/67Vp39Z.jpg
 
 **Client Deployed:** https://lindsayka9.github.io/capstoneember
+
 **Back-End Repo:** https://github.com/lindsayka9/capstonerailsapi
+
 **Back-End Deployed:** https://frozen-plains-50910.herokuapp.com/
 
 ## Project Planning and Implementation
