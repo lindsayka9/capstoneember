@@ -3,8 +3,8 @@
 
 **Just Say It.** is a blog for people who want to vent, post their feelings, and comment on each other's posts.
 
-[Screenshot](https://i.imgur.com/bCzFthc.png "Screenshot")
-[Screenshot](https://i.imgur.com/T3lUl29.png "Screenshot")
+![Screenshot](https://i.imgur.com/bCzFthc.png "Screenshot")
+![Screenshot](https://i.imgur.com/T3lUl29.png "Screenshot")
 
 **Wireframes:** https://i.imgur.com/UG0rhVg.jpg, https://i.imgur.com/67Vp39Z.jpg
 
