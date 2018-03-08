@@ -1,13 +1,4 @@
-  {{!-- <br>
-    <h3>{{post.title}}</h3>
-  <br>
-    <p>{{post.content}}</p>
-  <br>
-{{#if post.editable}}
-  <button {{action 'delete' post}}>Delete</button>
-  {{blog-post/edit post=post edit='edit'}}
 
-{{/if}} --}}
 <div class='blogpost'>
   <h2 class='blog-post-title'>
     {{post.title}}
@@ -44,14 +35,17 @@
   </div>
 {{/if}}
 
-{{!-- <div class="dont-hide">
+<div class="dont-hide">
 
-{{new-comment-form post=post createComment='createComment'}}
+  {{new-comment post=post comment=comment createComment='createComment'}}
 
-<h4 class="comment-count">{{post.comments.length}}<span> comments</span></h4>
-<br><br>
-{{#each post.comments as |comment|}}
-  {{blog-post/comment post=post comment=comment createComment='createComment'}}
-{{/each}}
+  <h4 class="comment-count">
+    {{post.comments.length}}
+    <span>Comments</span>
+  </h4>
+  <br><br>
+  {{#each post.comments as |comment|}}
+    {{blog-post/comment post=post comment=comment createComment='createComment'}}
+  {{/each}}
 
-</div> --}}
+</div>

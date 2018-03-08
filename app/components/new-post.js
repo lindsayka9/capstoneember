@@ -4,8 +4,8 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   classNames: ['newPost'],
-  // classNameBindings: ['newHidden'],
-  // newHidden: true,
+  classNameBindings: ['updatepostformhidden'],
+  updatepostformhidden: true,
   auth: service(),
   newPost: {
     title: null,
@@ -14,7 +14,7 @@ export default Component.extend({
   message: null,
   actions: {
     createPost() {
-      if ((this.get('newPost.title') !== null) && (this.get('newPost.content') !== null)) {
+      if (((this.get('newPost.title') !== null) && (this.get('newPost.title').length > 0)) && ((this.get('newPost.content') !== null) && (this.get('newPost.content').length > 0))) {
         this.sendAction('createPost', this.get('newPost'));
         this.set('newPost.title', null);
         this.set('newPost.content', null);
@@ -31,6 +31,9 @@ export default Component.extend({
       } else {
         button.value = "New Post"
       }
+    },
+    togglePostFormHide () {
+      return this.toggleProperty('updatepostformhidden');
     }
   }
 });

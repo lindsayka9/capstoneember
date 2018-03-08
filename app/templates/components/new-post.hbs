@@ -1,13 +1,14 @@
 {{#if auth.isAuthenticated}}
-{{!-- <input {{action 'toggleNewHidden'}} type="button" id="new-toggle-button" value="New Post"> --}}
-<form {{action 'createPost' on='submit'}}>
-  <h4>New Post</h4>
-  {{input value=newPost.title placeholder='Title'}}
-  <br>
-  {{input class="new-post-content" value=newPost.content placeholder='Content'}}
-  <button class="submit" type="submit">Add</button>
-  {{message}}
-</form>
-{{else}}
-<h3 class="sign-in-post">Please Sign In to Post</h3>
+  <button class="create-post" {{action 'togglePostFormHide'}}>Add New Post</button>
+  <form {{action 'createPost' on='submit'}}>
+    <h4>New Post</h4>
+    {{input value=newPost.title placeholder='Title'}}
+    <br>
+    {{input class="new-post-content" value=newPost.content placeholder='Content'}}
+    <br>
+    <button class="submit" type="submit">Add</button>
+    {{message}}
+  </form>
+  {{else}}
+  <h3 class="sign-in-post">Please Sign In to Post</h3>
 {{/if}}

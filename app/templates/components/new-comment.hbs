@@ -1,0 +1,11 @@
+{{#if auth.isAuthenticated}}
+  <h3>Post A Comment</h3>
+  {{!-- {{log post.id}} --}}
+  <form {{ action 'createComment' on='submit' post=post }}>
+    {{input value=newComment.text placeholder='New Comment'}}
+    <button class="submit" type="submit">Post Comment</button>
+    {{message}}
+  </form>
+  {{else}}
+  <h2 class="sign-in-to-post">Sign In to Comment</h2>
+{{/if}}

@@ -1,0 +1,10 @@
+<div>
+  <div class="comment">
+    {{comment.text}}
+  </div>
+  {{show-user user=comment.user}}
+  <div class="comment-buttons">
+    {{delete-comment comment=comment}}
+    {{edit-comment updateComment='updateComment' comment=comment}}
+  </div>
+</div>

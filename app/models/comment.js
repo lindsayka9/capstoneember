@@ -1,7 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  content: DS.attr('string'),
+  text: DS.attr('string'),
   post: DS.belongsTo('post'),
-  editable: DS.attr('boolean')
+  user_id: DS.attr('number'),
+  editable: DS.attr('boolean'),
+  post_id: DS.attr('number'),
+  user: DS.belongsTo('user')
 });

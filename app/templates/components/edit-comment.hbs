@@ -1,0 +1,8 @@
+{{#if comment.editable}}
+  <button class="edit-comment" {{action 'toggleFormHide'}}>Edit</button>
+  <form {{action 'updateComment' on='submit'}}>
+    {{input value=comment.text placeholder=comment.text}}
+    <button class="submit" type="submit">Save</button>
+    {{message}}
+  </form>
+{{/if}}
