@@ -1,64 +1,50 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Just Say It.
+## A blog for those that want to speak their minds.
 
-# ember-auth-template
+**Just Say It.** is a blog for people who want to vent, post their feelings, and comment on each other's posts.
 
-A front-end framework template for starting projects with a recent version of
-either the [Rails API Template](https://git.generalassemb.ly/ga-wdi-boston/rails-api-template)
-or the [Express API Template](https://git.generalassemb.ly/ga-wdi-boston/express-api-template).
+[Screenshot](https://i.imgur.com/bCzFthc.png "Screenshot")
+[Screenshot](https://i.imgur.com/T3lUl29.png "Screenshot")
 
-_Note: When using the Express API Template, User endpoints may need to be
-modified in order for all authentication actions to execute properly._
+**Wireframes:** https://i.imgur.com/UG0rhVg.jpg, https://i.imgur.com/67Vp39Z.jpg
 
-At the beginning of each cohort, update from [ember-template](https://git.generalassemb.ly/ga-wdi-boston/ember-template).
+**Client Deployed:** https://lindsayka9.github.io/capstoneember
+**Back-End Repo:** https://github.com/lindsayka9/capstonerailsapi
+**Back-End Deployed:** https://frozen-plains-50910.herokuapp.com/
 
-## Prerequisites
+## Project Planning and Implementation
 
-- [ember-auth-template-walkthrough](https://git.generalassemb.ly/ga-wdi-boston/ember-auth-template-walkthrough)
+When it came to planning out the building of this project, I started out by pseudocoding and drawing everything out on paper before I even touched my computer. When it was time to start coding, I first built my API out for both my resources (posts and comments). I knew that I would be using both of these, and wanted to make sure they were there when I was ready to start building out front-end functionality.
 
-## Installation
+Moving to the front-end I began by building a route for posts, then putting all of the code I needed to complete all CRUD actions in the `posts.js` route file. Once everything was functional in that file, I generated new components for all of the modules I wanted to make use of, and migrated the appropriate actions and methods to each component and template.
 
-1. [Download](../../archive/master.zip) this template.
-1. Unzip and rename the template directory (`unzip ~/Downloads/ember-auth-template-master.zip`).
-1. Move into the new project and `git init`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `capstoneember` with your app name. This
-    includes:
-      - [`app/adapters/application.js`](app/adapters/application.js)
-      - [`app/index.html`](app/index.html)
-      - [`app/services/ajax.js`](app/services/ajax.js)
-      - [`config/environment.js`](config/environment.js)
-      - [`package.json`](package.json)
-      - [`tests/index.html`](tests/index.html)
-      - [`tests/unit/initializers/text-field-test.js`](tests/unit/initializers/text-field-test.js)
-1. Install dependencies with `npm install`.
-1. `git add` and `git commit` your changes.
-1. Run the development server with `ember server`. Use the `--proxy` flag to
-    avoid writing development-specific CORS and CSP settings.
+After my `posts` resource was fully functional on the front-end, I moved on to my second resource, `comments`. I wanted users to be able to add comments on their own and other's posts, so I created components right away for these - I had been keeping notes along the way with the `posts` process.
 
-## Structure
+The final steps for me were bug fixes and styling, which was made easier by copious user testing by myself and others.
 
-Dependencies are stored in [`package.json`](package.json).
+### Technlogies Used
+- Ember.js
+- JavaScript
+- Ruby
+- Rails
+- CSS
 
-Developers should store styles in [`app/styles`](app/styles) and load them
-from [`app/styles/app.scss`](app/styles/app.scss).
+### Next Time
 
-To deploy an ember-auth-template based SPA, run `grunt deploy`.
+I would like to give more functionality to the comments resource in future iterations of this project, so the post user would be able to delete comments on their post.
 
-## Additional Resources
+I'd also like to create 'Admin' functionality, though I'm not sure at this point what that would look like. Lastly, I'd like to add a way for users to upload photos and other media to go along with their post, and add category tags.
 
-- [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
-- [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
-- [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
-- [EmberJS Authentication Tutorial](https://auth0.com/blog/emberjs-authentication-tutorial/)
-- [How To Import A Library on Ember.js](https://stackoverflow.com/questions/38919757/how-to-import-a-library-on-ember-js)
+## User Stories
 
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+As a user, I want to be able to sign up, sign in, and sign out
+As a user, I want to be able to change my password
+As a user, I want to be able to create a new blog post
+As a user, I want to be able to see all blog posts by all users
+As a user, I want to be able to see who wrote each blog post
+As a user, I want to be able to edit my blog post
+As a user, I want to be able to delete my blog post
+As a user, I want to be able to read an individual post
+As a user, I want to be able to comment on any blog post
+As a user, I want to be able to edit my comment
+As a user, I want to be able to delete my comment
