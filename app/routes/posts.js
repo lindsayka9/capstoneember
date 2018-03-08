@@ -13,7 +13,8 @@ export default Route.extend({
     createPost(post) {
       let newPost = this.get('store').createRecord('post', post);
       newPost.save();
-      this.get('flashMessages').success('Post Published!');
+      this.get('flashMessages').success('Post Published!')
+      this.toggleProperty('newpostformhidden');
     }
   }
 });

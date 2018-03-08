@@ -12,6 +12,7 @@ export default Component.extend({
     updatePost() {
       if ((this.get('post.title').length > 0) && (this.get('post.content').length > 0)) {
         this.sendAction('updatePost', this.get('post'));
+        return this.toggleProperty('editformhidden');
       } else {
         this.set('message', 'Both fields required');
       }

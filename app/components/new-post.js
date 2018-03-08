@@ -4,8 +4,8 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   classNames: ['newPost'],
-  classNameBindings: ['updatepostformhidden'],
-  updatepostformhidden: true,
+  classNameBindings: ['newpostformhidden'],
+  newpostformhidden: true,
   auth: service(),
   newPost: {
     title: null,
@@ -19,21 +19,22 @@ export default Component.extend({
         this.set('newPost.title', null);
         this.set('newPost.content', null);
         this.set('message', null);
+        return this.toggleProperty('newpostformhidden');
       } else {
         this.set('message', 'Both fields required');
       }
     },
-    toggleNewHidden () {
-      this.toggleProperty('newHidden');
-      const button = document.getElementById("new-toggle-button")
-      if (button.value == "New Post") {
-        button.value = "Cancel"
-      } else {
-        button.value = "New Post"
-      }
-    },
+    // toggleNewHidden () {
+    //   this.toggleProperty('newHidden');
+    //   const button = document.getElementById("new-toggle-button")
+    //   if (button.value == "New Post") {
+    //     button.value = "Cancel"
+    //   } else {
+    //     button.value = "New Post"
+    //   }
+    // },
     togglePostFormHide () {
-      return this.toggleProperty('updatepostformhidden');
+      return this.toggleProperty('newpostformhidden');
     }
   }
 });
