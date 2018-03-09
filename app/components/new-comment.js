@@ -9,7 +9,7 @@ export default Component.extend({
   message: null,
   actions: {
   createComment() {
-    if (this.get('newComment.text') !== null) {
+    if ((this.get('newComment.text') !== null) && (this.get('newComment.text').length > 0)) {
       this.sendAction('createComment', this.get('newComment'), this.get('post'));
       this.set('newComment.text', null);
       this.set('message', null);
