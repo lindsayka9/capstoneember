@@ -1,7 +1,7 @@
 # Just Say It.
 ## A blog for those that want to speak their minds.
 
-**Just Say It.** is a blog for people who want to vent, post their feelings, and comment on each other's posts.
+**Just Say It.** is a blog for people who want to vent, post their feelings, and comment on each other's posts. Users can create a new post, read any post, and edit and delete their own posts. They can also create comments on any post, as well as edit and delete their own comments.
 
 ![Screenshot](https://i.imgur.com/bCzFthc.png "Screenshot")
 ![Screenshot](https://i.imgur.com/T3lUl29.png "Screenshot")
