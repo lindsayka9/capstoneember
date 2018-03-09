@@ -10,8 +10,6 @@ export default Component.extend({
   actions: {
   createComment() {
     if (this.get('newComment.text') !== null) {
-      console.log(this.get('post'))
-      console.log(this.get('newComment'))
       this.sendAction('createComment', this.get('newComment'), this.get('post'));
       this.set('newComment.text', null);
       this.set('message', null);
